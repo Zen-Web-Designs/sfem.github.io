@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Simple front-end modules</title>
+    <title>Simple front-end modules :: Grid</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/master.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="nav">
@@ -46,12 +47,44 @@
         <div class="logo__text">Simple<br>Front-End<br>Modules</div></a>
       <div class="menu-toggle js-show-nav"></div>
     </div>
-    <div class="header header--intro">
+    <div class="header">
       <div class="header__text">
-        <div class="header__title">Nothing but simple</div>
+        <div class="header__title">Breakpoint</div>
+        <div class="header__description">Simple helper for @media queries. Using scss list for breakpoints difinition.</div>
       </div>
     </div>
+    <section class="row">
+      <h2>Installation</h2>
+      <pre class="hgcode"><code class="sh">npm install --save @sfem/breackpoint</code></pre>
+    </section>
+    <section class="row">
+      <h2>Usage</h2>
+      <p>Import module to your scss</p>
+      <pre class="hgcode"><code class="scss">@import &#39;@sfem/breakpoint&#39;;</code></pre>
+      <p>Call mixins:</p>
+      <pre class="hgcode"><code class="scss">@include bp(xs) {
+  // code
+}
+</code></pre>
+      <pre class="hgcode"><code class="scss">@include bpq(&#39;min-width 20em&#39;) {
+  // code
+}</code></pre>
+      <h4>Breakpoints:</h4>
+      <pre class="hgcode"><code class="scss">$breakpoints: (
+  xxs: 320px,
+  xs: 640px,
+  s: 768px,
+  m: 1024px,
+  l: 1280px,
+  xl: 1440px,
+  xxl: 1600px
+) !default;
+
+</code></pre>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
     <script src="/js/master.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

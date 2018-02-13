@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Simple front-end modules :: Grid</title>
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
@@ -12,24 +13,22 @@
   <body>
     <div class="nav">
       <section class="row">
-        <div class="wrap">
-          <div class="grid grid--gap-4vmax">
-            <div class="grid__box grid__box--size-4"><a class="card card--teal" href="/docs/breakpoint">
-                <div class="card__info">
-                  <div class="card__title">Breakpoint</div>
-                  <div class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quod?</div>
-                </div>
-                <div class="card__deco"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g><path data-color="color-2" d="M8 48H2V8h32M56 8h6v40H22M22 60h20"/><path d="M55 32H35c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h20c.6 0 1 .4 1 1v28c0 .6-.4 1-1 1zM44 26h2M21 54H9c-.6 0-1-.4-1-1V31c0-.6.4-1 1-1h12c.6 0 1 .4 1 1v22c0 .6-.4 1-1 1zM14 48h2"/><path data-color="color-2" d="M28 56h8v4h-8z"/></g></svg>
-                </div></a>
-            </div>
-            <div class="grid__box grid__box--size-4"><a class="card card--green" href="/docs/grid">
-                <div class="card__info">
-                  <div class="card__title">Grid</div>
-                  <div class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quod?</div>
-                </div>
-                <div class="card__deco"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g><path d="M2 51h60v8H2z"/><path data-color="color-2" d="M2 35h26v8H2z"/><path d="M2 19h14v8H2z"/><path data-color="color-2" d="M2 5h8v6H2zM19 5h8v6h-8zM37 5h8v6h-8zM54 5h8v6h-8z"/><path d="M48 19h14v8H48zM25 19h14v8H25z"/><path data-color="color-2" d="M36 35h26v8H36z"/></g></svg>
-                </div></a>
-            </div>
+        <div class="grid grid--gap-24 grid--gap--m-4vmax">
+          <div class="grid__box grid__box--size-12 grid__box--size-m-3"><a class="card card--teal" href="/docs/breakpoint">
+              <div class="card__info">
+                <div class="card__title">Breakpoint</div>
+                <div class="card__description">Simple helper for @media queries. Using scss list for breakpoints difinition.</div>
+              </div>
+              <div class="card__deco"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g><path data-color="color-2" d="M8 48H2V8h32M56 8h6v40H22M22 60h20"/><path d="M55 32H35c-.6 0-1-.4-1-1V3c0-.6.4-1 1-1h20c.6 0 1 .4 1 1v28c0 .6-.4 1-1 1zM44 26h2M21 54H9c-.6 0-1-.4-1-1V31c0-.6.4-1 1-1h12c.6 0 1 .4 1 1v22c0 .6-.4 1-1 1zM14 48h2"/><path data-color="color-2" d="M28 56h8v4h-8z"/></g></svg>
+              </div></a>
+          </div>
+          <div class="grid__box grid__box--size-12 grid__box--size-m-3"><a class="card card--green" href="/docs/grid">
+              <div class="card__info">
+                <div class="card__title">Grid</div>
+                <div class="card__description">Flexyble grid system based on flex-box. Can be used as static css or as grid generator in scss.</div>
+              </div>
+              <div class="card__deco"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g><path d="M2 51h60v8H2z"/><path data-color="color-2" d="M2 35h26v8H2z"/><path d="M2 19h14v8H2z"/><path data-color="color-2" d="M2 5h8v6H2zM19 5h8v6h-8zM37 5h8v6h-8zM54 5h8v6h-8z"/><path d="M48 19h14v8H48zM25 19h14v8H25z"/><path data-color="color-2" d="M36 35h26v8H36z"/></g></svg>
+              </div></a>
           </div>
         </div>
       </section>
@@ -50,501 +49,485 @@
     </div>
     <div class="header">
       <div class="header__text">
-        <div class="header__title">@Sfem/Grid</div>
-        <div class="header__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quod?</div>
+        <div class="header__title">Grid</div>
+        <div class="header__description">Flexyble grid system based on flex-box. Can be used as static css or as grid generator in scss.</div>
       </div>
     </div>
     <section class="row">
-      <div class="wrap">
-        <h2>Installation</h2>
-      </div>
+      <h2>Installation</h2>
+      <h3>npm</h3>
+      <pre class="hgcode"><code class="sh">npm i @sfem/grid --save</code></pre>
+      <h3>css</h3><p>Add the <code>sfem-grid.css</code> development or <code>sfem-grid.min.css</code> production to your html page.</p>
+
+      <pre class="hgcode"><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/flexboxgrid.min.css&quot; type=&quot;text/css&quot;&gt;
+</code></pre>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Basic call</h2>
-        <p class="description">By default blocks has no sizes and can be used as stucked elements</p>
-        <div class="grid">
-          <div class="grid__box">
-            <div class="box lesspad">#
-            </div>
-          </div>
-          <div class="grid__box">
-            <div class="box lesspad">##
-            </div>
-          </div>
-          <div class="grid__box">
-            <div class="box lesspad">###
-            </div>
-          </div>
-          <div class="grid__box">
-            <div class="box lesspad">####
-            </div>
-          </div>
-          <div class="grid__box">
-            <div class="box lesspad">#####
-            </div>
-          </div>
-          <div class="grid__box">
-            <div class="box lesspad">######
-            </div>
+      <h2>Basic call</h2>
+      <div class="description">By default blocks has no sizes and can be used as stucked elements</div>
+      <div class="grid">
+        <div class="grid__box">
+          <div class="box lesspad">#
           </div>
         </div>
-        <pre><code class="html">&lt;div class=&quot;grid&quot;&gt;
+        <div class="grid__box">
+          <div class="box lesspad">##
+          </div>
+        </div>
+        <div class="grid__box">
+          <div class="box lesspad">###
+          </div>
+        </div>
+        <div class="grid__box">
+          <div class="box lesspad">####
+          </div>
+        </div>
+        <div class="grid__box">
+          <div class="box lesspad">#####
+          </div>
+        </div>
+        <div class="grid__box">
+          <div class="box lesspad">######
+          </div>
+        </div>
+      </div>
+      <pre class="hgcode"><code class="html">&lt;div class=&quot;grid&quot;&gt;
   &lt;div class=&quot;grid__box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Responsive</h2>
-        <p class="description">Responsive modifiers enable different block sizes, offsets, alignment and distribution.</p>
-        <div class="grid">
-          <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-8">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-10">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-10">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-12 grid__box--size-m-2">
-            <div class="box"></div>
-          </div>
+      <h2>Responsive</h2>
+      <div class="description">Responsive modifiers enable different block sizes, offsets, alignment and distribution.</div>
+      <div class="grid">
+        <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2">
+          <div class="box"></div>
         </div>
-        <pre><code class="html">&lt;!-- xxs, xs, s, m, l, xl, xxl.--&gt;
+        <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-8">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-10">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-10">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-12 grid__box--size-m-2">
+          <div class="box"></div>
+        </div>
+      </div>
+      <pre class="hgcode"><code class="html">&lt;!-- xxs, xs, s, m, l, xl, xxl.--&gt;
 &lt;div class=&quot;grid&quot;&gt;
   &lt;div class=&quot;grid__box grid__box--size-12 grid__box--size-s-6 grid__box--size-m-2&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Auto width</h2>
-        <p class="description">Add any number of auto sizing columns to a row.</p>
-        <div class="grid">
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
+      <h2>Auto width</h2>
+      <div class="description">Add any number of auto sizing columns to a row.</div>
+      <div class="grid">
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
         </div>
-        <pre><code class="html">&lt;div class=&quot;grid&quot;&gt;
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+      </div>
+      <pre class="hgcode"><code class="html">&lt;div class=&quot;grid&quot;&gt;
   &lt;div class=&quot;grid__box grid__box--size-auto&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+    </section>
+    <section class="row">
+      <h2>Fluid</h2>
+      <div class="description">Percent based widths allow resizing of columns.</div>
+      <div class="grid">
+        <div class="grid__box grid__box--size-12">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-1">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-11">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-2">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-10">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-3">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-9">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-8">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-5">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-7">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-6">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-6">
+          <div class="box"></div>
+        </div>
+      </div>
+      <pre class="hgcode"><code class="html">&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;grid__box grid__box--size-[n]&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+    <section class="row">
+      <h2>Offset</h2>
+      <div class="description">Left offset for blocks</div>
+      <div class="grid">
+        <div class="grid__box grid__box--offset-0 grid__box--size-12">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-1 grid__box--size-11">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-2 grid__box--size-10">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-3 grid__box--size-9">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-4 grid__box--size-8">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-5 grid__box--size-7">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-6 grid__box--size-6">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-7 grid__box--size-5">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-8 grid__box--size-4">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-9 grid__box--size-3">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-10 grid__box--size-2">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--offset-11 grid__box--size-1">
+          <div class="box"></div>
+        </div>
+      </div>
+      <pre class="hgcode"><code class="html">&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;grid__box grid__box--size-6 grid__box--offset-6&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+    <section class="row">
+      <h2>Order</h2>
+      <div class="description">Control order of your blocks for each breakpoint</div>
+      <div class="grid">
+        <div class="grid__box grid__box--size-4 grid__box--order-3 grid__box--order-m-2 grid__box--order-l-1">
+          <div class="box accent"></div>
+        </div>
+        <div class="grid__box grid__box--size-4 grid__box--order-2 grid__box--order-m-1 grid__box--order-l-3">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-4 grid__box--order-1 grid__box--order-m-3 grid__box--order-l-2">
+          <div class="box"></div>
+        </div>
+      </div>
+      <pre class="hgcode"><code class="html">&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;grid__box grid__box--size-4 grid__box--order-3 grid__box--order-m-2 grid__box--order-l-1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid__box grid__box--size-4 grid__box--order-2 grid__box--order-m-1 grid__box--order-l-3&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;grid__box grid__box--size-4 grid__box--order-1 grid__box--order-m-3 grid__box--order-l-2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+    <section class="row">
+      <h2>Grid padding</h2>
+      <div class="description">Different grid pading if you need (Default: 0, 8, 16, 24)</div>
+      <h4>--gap-8</h4>
+      <div class="grid grid--gap-8">
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+      </div>
+      <h4>--gap-24</h4>
+      <div class="grid grid--gap-24">
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box"></div>
+        </div>
       </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Fluid</h2>
-        <p class="description">Percent based widths allow resizing of columns.</p>
-        <div class="grid">
-          <div class="grid__box grid__box--size-12">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-1">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-11">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-2">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-10">
+      <h2>Horizontal align</h2>
+      <div class="description">How blocks placed in row Horizontally</div>
+      <h4>--ha-start</h4>
+      <div class="pane">
+        <div class="grid grid--ha-start">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
           <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--size-9">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-8">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-5">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-7">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-6">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-6">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
         </div>
-        <pre><code class="html">&lt;div class=&quot;grid&quot;&gt;
-  &lt;div class=&quot;grid__box grid__box--size-[n]&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
       </div>
-    </section>
-    <section class="row">
-      <div class="wrap">
-        <h2>Offset</h2>
-        <p class="description">Left offset for blocks</p>
-        <div class="grid">
-          <div class="grid__box grid__box--offset-0 grid__box--size-12">
+      <h4>--ha-end</h4>
+      <div class="pane">
+        <div class="grid grid--ha-end">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--offset-1 grid__box--size-11">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--offset-2 grid__box--size-10">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-3 grid__box--size-9">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-4 grid__box--size-8">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-5 grid__box--size-7">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-6 grid__box--size-6">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-7 grid__box--size-5">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-8 grid__box--size-4">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-9 grid__box--size-3">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-10 grid__box--size-2">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--offset-11 grid__box--size-1">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
         </div>
-        <pre><code class="html">&lt;div class=&quot;grid&quot;&gt;
-  &lt;div class=&quot;grid__box grid__box--size-6 grid__box--offset-6&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
       </div>
-    </section>
-    <section class="row">
-      <div class="wrap">
-        <h2>Order</h2>
-        <p class="description">Control order of your blocks for each breakpoint</p>
-        <div class="grid">
-          <div class="grid__box grid__box--size-4 grid__box--order-3 grid__box--order-m-2 grid__box--order-l-1">
-            <div class="box accent"></div>
-          </div>
-          <div class="grid__box grid__box--size-4 grid__box--order-2 grid__box--order-m-1 grid__box--order-l-3">
+      <h4>--ha-center</h4>
+      <div class="pane">
+        <div class="grid grid--ha-center">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--size-4 grid__box--order-1 grid__box--order-m-3 grid__box--order-l-2">
+          <div class="grid__box grid__box--size-3">
+            <div class="box"></div>
+          </div>
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
         </div>
-        <pre><code class="html">&lt;div class=&quot;grid&quot;&gt;
-  &lt;div class=&quot;grid__box grid__box--size-4 grid__box--order-3 grid__box--order-m-2 grid__box--order-l-1&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;grid__box grid__box--size-4 grid__box--order-2 grid__box--order-m-1 grid__box--order-l-3&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;grid__box grid__box--size-4 grid__box--order-1 grid__box--order-m-3 grid__box--order-l-2&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
       </div>
-    </section>
-    <section class="row">
-      <div class="wrap">
-        <h2>Grid padding</h2>
-        <p class="description">Different grid pading if you need (Default: 0, 8, 16, 24)</p>
-        <h3>--gap-8</h3>
-        <div class="grid grid--gap-8">
-          <div class="grid__box grid__box--size-auto">
+      <h4>--ha-between</h4>
+      <div class="pane">
+        <div class="grid grid--ha-between">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--size-auto">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
         </div>
-        <h3>--gap-24</h3>
-        <div class="grid grid--gap-24">
-          <div class="grid__box grid__box--size-auto">
+      </div>
+      <h4>--ha-around</h4>
+      <div class="pane">
+        <div class="grid grid--ha-around">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--size-auto">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box"></div>
-          </div>
-          <div class="grid__box grid__box--size-auto">
+          <div class="grid__box grid__box--size-3">
             <div class="box"></div>
           </div>
         </div>
       </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Horizontal align</h2>
-        <p class="description">How blocks placed in row Horizontally</p>
-        <h4>--ha-start</h4>
-        <div class="pane">
-          <div class="grid grid--ha-start">
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
+      <h2>Vertical align</h2>
+      <div class="description">How blocks placed in row Vertically</div>
+      <h4>--va-top</h4>
+      <div class="grid grid--va-top">
+        <div class="grid__box grid__box--size-4">
+          <div class="box">
           </div>
         </div>
-        <h4>--ha-end</h4>
-        <div class="pane">
-          <div class="grid grid--ha-end">
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"><br>
           </div>
         </div>
-        <h4>--ha-center</h4>
-        <div class="pane">
-          <div class="grid grid--ha-center">
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"><br><br>
           </div>
         </div>
-        <h4>--ha-between</h4>
-        <div class="pane">
-          <div class="grid grid--ha-between">
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
+      </div>
+      <h4>--va-middle</h4>
+      <div class="grid grid--va-middle">
+        <div class="grid__box grid__box--size-4">
+          <div class="box">
           </div>
         </div>
-        <h4>--ha-around</h4>
-        <div class="pane">
-          <div class="grid grid--ha-around">
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div class="box"></div>
-            </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"><br>
+          </div>
+        </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"><br><br>
+          </div>
+        </div>
+      </div>
+      <h4>--va-bottom</h4>
+      <div class="grid grid--va-bottom">
+        <div class="grid__box grid__box--size-4">
+          <div class="box">
+          </div>
+        </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"><br>
+          </div>
+        </div>
+        <div class="grid__box grid__box--size-4">
+          <div class="box"><br><br>
           </div>
         </div>
       </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Vertical align</h2>
-        <p class="description">How blocks placed in row Vertically</p>
-        <h4>--va-top</h4>
-        <div class="grid grid--va-top">
-          <div class="grid__box grid__box--size-4">
-            <div class="box">
-            </div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"><br>
-            </div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"><br><br>
-            </div>
-          </div>
-        </div>
-        <h4>--va-middle</h4>
-        <div class="grid grid--va-middle">
-          <div class="grid__box grid__box--size-4">
-            <div class="box">
-            </div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"><br>
-            </div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"><br><br>
-            </div>
-          </div>
-        </div>
-        <h4>--va-bottom</h4>
-        <div class="grid grid--va-bottom">
-          <div class="grid__box grid__box--size-4">
-            <div class="box">
-            </div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"><br>
-            </div>
-          </div>
-          <div class="grid__box grid__box--size-4">
-            <div class="box"><br><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="row">
-      <div class="wrap">
-        <h2>Nesting</h2>
-        <p class="description">Nest grids inside grids inside grids......</p>
-        <div class="grid">
-          <div class="grid__box grid__box--size-auto">
-            <div class="box">
-              <div class="grid">
-                <div class="grid__box grid__box--size-auto">
-                  <div class="box">
-                    <div class="grid">
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
+      <h2>Nesting</h2>
+      <div class="description">Nest grids inside grids inside grids......</div>
+      <div class="grid">
+        <div class="grid__box grid__box--size-auto">
+          <div class="box">
+            <div class="grid">
+              <div class="grid__box grid__box--size-auto">
+                <div class="box">
+                  <div class="grid">
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
+                    </div>
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
                     </div>
                   </div>
                 </div>
-                <div class="grid__box grid__box--size-auto">
-                  <div class="box">
-                    <div class="grid">
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
+              </div>
+              <div class="grid__box grid__box--size-auto">
+                <div class="box">
+                  <div class="grid">
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
+                    </div>
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="grid__box grid__box--size-auto">
-            <div class="box">
-              <div class="grid">
-                <div class="grid__box grid__box--size-auto">
-                  <div class="box">
-                    <div class="grid">
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
+        </div>
+        <div class="grid__box grid__box--size-auto">
+          <div class="box">
+            <div class="grid">
+              <div class="grid__box grid__box--size-auto">
+                <div class="box">
+                  <div class="grid">
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
+                    </div>
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
                     </div>
                   </div>
                 </div>
-                <div class="grid__box grid__box--size-auto">
-                  <div class="box">
-                    <div class="grid">
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
-                      <div class="grid__box grid__box--size-auto">
-                        <div class="box"></div>
-                      </div>
+              </div>
+              <div class="grid__box grid__box--size-auto">
+                <div class="box">
+                  <div class="grid">
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
+                    </div>
+                    <div class="grid__box grid__box--size-auto">
+                      <div class="box"></div>
                     </div>
                   </div>
                 </div>
@@ -555,24 +538,12 @@
       </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Installation</h2>
-        <h3>npm</h3>
-        <pre><code class="sh">npm i @sfem/grid --save
-</code></pre>
-        <h3>css</h3><p>Add the <code>sfem-grid.css</code> development or <code>sfem-grid.min.css</code> production to your html page.</p>
-
-        <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/flexboxgrid.min.css&quot; type=&quot;text/css&quot;&gt;</code></pre>
-      </div>
-    </section>
-    <section class="row">
-      <div class="wrap">
-        <h2>Using in scss</h2>
-        <pre><code class="scss">@import "~@sfem/grid/sfem-grid"; // if node-sass-tilde-importer installed or relative path if not
+      <h2>Using in scss</h2>
+      <pre class="hgcode"><code class="scss">@import &quot;~@sfem/grid/sfem-grid&quot;; // if node-sass-tilde-importer installed or relative path if not
 
 // class names setting
-$sfem-grid-name: 'grd'; // default: grid
-$sfem-grid-box-name: 'bxs'; // default: grid__box
+$sfem-grid-name: &#39;grd&#39;; // default: grid
+$sfem-grid-box-name: &#39;bxs&#39;; // default: grid__box
 
 // Grid sets. We can generate grids with various nums of columns
 $sfem-grid-columns: (10, 12); // default: (12)
@@ -592,1281 +563,1272 @@ $sfem-grid-breakpoint: (
   xl: 1440px,
   xxl: 1600px
 );</code></pre>
-      </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>Modifers and name logic</h2><pre><code>[grid/box][--modificator][-breakpoint][-value](*of[-colls])
+      <h2>Modifers and name logic</h2>
+      <pre class="hgcode"><code class="scss">[grid/box][--modificator][-breakpoint][-value](*of[-colls])
 </code></pre>
-
-        <p>* if generated more tham one grid ($sfem-grid-columns)</p>
-        <h3>Examples</h3>
-        <table>
-          <tr>
-            <td><pre><code>.grid
+      <p>* if generated more than one grid ($sfem-grid-columns)</p>
+      <h3>Examples</h3>
+      <div class="grid">
+        <div class="grid__box grid__box--size-12 grid__box--size-m-min">
+          <pre class="hgcode"><code class="scss">.grid
 .grid--gap-8
-.grid--gap-xl-24
-</code></pre>
-
-            </td>
-            <td><pre><code>.grid__box
+.grid--gap-xl-24</code></pre>
+        </div>
+        <div class="grid__box grid__box--size-12 grid__box--size-m-min">
+          <pre class="hgcode"><code class="scss">.grid__box
 .grid__box--size-auto
-.grid__box--size-m-auto
-</code></pre>
-
-            </td>
-          </tr>
-        </table>
+.grid__box--size-m-auto</code></pre>
+        </div>
       </div>
     </section>
     <section class="row">
-      <div class="wrap">
-        <h2>All class names</h2>
-        <p class="description">If you need this :)</p>
-        <div class="classsnames">
-          <h3>.grid</h3>
-          <h5>gap</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-l-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-l-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-l-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-m-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-m-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-m-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-s-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-s-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-s-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xl-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xl-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xs-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xs-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xxl-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xxl-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xxl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xxs-0</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xxs-24</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--gap-xxs-8</div>
-            </div>
+      <h2>All class names</h2>
+      <div class="description">If you need this :)</div>
+      <div class="classsnames">
+        <h3>.grid</h3>
+        <h5>gap</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-0</div>
           </div>
-          <h5>ha</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--ha-around</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--ha-between</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--ha-center</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--ha-end</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--ha-start</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-24</div>
           </div>
-          <h5>no</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--no-wrap</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-8</div>
           </div>
-          <h5>va</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-l-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-l-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-l-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-m-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-m-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-m-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-s-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-s-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-s-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xl-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xl-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xl-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xs-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xs-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xs-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xxl-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xxl-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xxl-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xxs-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xxs-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid--va-xxs-top</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-l-0</div>
           </div>
-          <h3>.grid__box</h3>
-          <h5>offset</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-l-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-m-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-s-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xl-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xs-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxl-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--offset-xxs-auto</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-l-24</div>
           </div>
-          <h5>order</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-l-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-m-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-s-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xl-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xs-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxl-last</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-first</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--order-xxs-last</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-l-8</div>
           </div>
-          <h5>size</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-l-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-m-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-s-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xl-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xs-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxl-min</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-1</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-10</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-11</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-12</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-2</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-3</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-4</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-5</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-6</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-7</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-8</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-9</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-auto</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--size-xxs-min</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-m-0</div>
           </div>
-          <h5>va</h5>
-          <div class="grid grid--gap-0">
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-l-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-l-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-l-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-m-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-m-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-m-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-s-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-s-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-s-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xl-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xl-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xl-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xs-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xs-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xs-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xxl-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xxl-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xxl-top</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xxs-bottom</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xxs-middle</div>
-            </div>
-            <div class="grid__box grid__box--size-3">
-              <div>.grid__box--va-xxs-top</div>
-            </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-m-24</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-m-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-s-0</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-s-24</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-s-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xl-0</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xl-24</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xs-0</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xs-24</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xxl-0</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xxl-24</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xxl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xxs-0</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xxs-24</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--gap-xxs-8</div>
+          </div>
+        </div>
+        <h5>ha</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--ha-around</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--ha-between</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--ha-center</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--ha-end</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--ha-start</div>
+          </div>
+        </div>
+        <h5>no</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--no-wrap</div>
+          </div>
+        </div>
+        <h5>va</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-l-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-l-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-l-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-m-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-m-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-m-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-s-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-s-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-s-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xl-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xl-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xl-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xs-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xs-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xs-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xxl-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xxl-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xxl-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xxs-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xxs-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid--va-xxs-top</div>
+          </div>
+        </div>
+        <h3>.grid__box</h3>
+        <h5>offset</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-l-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-m-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-s-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xl-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xs-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxl-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--offset-xxs-auto</div>
+          </div>
+        </div>
+        <h5>order</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-l-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-m-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-s-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xl-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xs-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxl-last</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-first</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--order-xxs-last</div>
+          </div>
+        </div>
+        <h5>size</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-l-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-m-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-s-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xl-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xs-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxl-min</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-1</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-10</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-11</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-12</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-2</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-3</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-4</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-5</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-6</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-7</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-8</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-9</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-auto</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--size-xxs-min</div>
+          </div>
+        </div>
+        <h5>va</h5>
+        <div class="grid grid--gap-8">
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-l-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-l-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-l-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-m-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-m-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-m-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-s-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-s-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-s-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xl-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xl-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xl-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xs-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xs-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xs-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xxl-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xxl-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xxl-top</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xxs-bottom</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xxs-middle</div>
+          </div>
+          <div class="grid__box grid__box--size-6 grid__box--size-m-3">
+            <div>.grid__box--va-xxs-top</div>
           </div>
         </div>
       </div>
